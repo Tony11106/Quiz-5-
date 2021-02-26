@@ -1,0 +1,59 @@
+# Quiz 5
+
+# Tony Maldonado-Perez
+# amaldo36@uic.edu
+# I hereby attest that I have adhered to the rules for quizzes and projects as well as UIC's
+# Academic Integrity standards. Signed: Anthony Maldonado-Perez
+
+# Question 1
+
+def quiz_1(dict_txt):
+    f = open("dict.txt","w")
+    # open the file to write
+    f.write("Dictionary File\n")
+    for i in dict_txt:
+        file.write("\n")
+        file.write("key: ")
+        file.write(str(i))
+        file.write("\n")
+        file.write("Value: ")
+        file.write(str(dict_txt))
+        file.write("\n")
+    file.close()
+quiz_1({"A": "Apple", "B": "Banana"})
+
+# Question 2
+
+def quiz_2(filename):
+    q2 = {}
+        with open(filename, "r") as f:
+            r = f.readline()
+            # readlines from filename
+            i = 0
+            while i<len(r) - 1:
+                if r[i].startswith("key"):
+                    key = r[i]
+                    value = r[i+1]
+                    q2[key[5:].strip("\n")] = value[7:].strip("\n")
+                    i += 1
+
+print(quiz_2("q2.txt"))
+
+# Question 3
+
+# function quiz3
+def quiz_3(f1, f2):
+    # opening two files in read mode
+    f1 = open(f1, 'r')
+    f2 = open(f2, 'r')
+    r1 = f1.read()
+    r2 = f2.read()
+    similar = 0
+    for i in range(0, len(r1) - 1):
+        if r1[i] == r2[i]:
+            similar = similar + 2
+    print((similar / (len(r1) + len(r2)) * 100), end=" ")
+    # I keep getting an error for end=" "
+    print('%')
+
+quiz_3('ex1.txt', 'ex2.txt')
